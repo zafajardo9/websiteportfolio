@@ -4,19 +4,25 @@ import {
 Avatar,
 Box,
 Grid,
-Typography,
+Typography
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme=>({
   avatar: {
-    display: "block",
-    margin: "5rem auto",
-    width: 400,
-    height: 400 //TO BE EDITED //Responsiveness
-  },
+    width: "300px",
+    height: "300px",
+
+    [theme.breakpoints.down('xs')]: {
+      alignItems: "center",
+      alignSelf: "center"
+    },
+  }, 
   headerBox: {
     margin: "50% auto",
-    fontSize: "1rem"
+    fontSize: "1rem",
+    [theme.breakpoints.down('xs')]: {
+      textAlign: "center"
+    },
   },
   NameHeader: {
     fontStyle: "bold",
@@ -32,18 +38,19 @@ const useStyles = makeStyles(theme=>({
 
 export default function Header() {
     const classes = useStyles();
+    
     return (
       <>
 
-      <Grid container spacing={3}>
-        <Grid item xs={8}>
-          <Box component="div">
-            <div className={classes.root}>
-                <Avatar className={classes.avatar} alt="Lol" src="https://i.pinimg.com/564x/f2/60/4d/f2604d7288860de99f88315a3487fa69.jpg" />
-            </div>   
+      <Grid container className={classes.header} alignItems="center" justify="center">
+        <Grid item xs={12} sm={12} md={4} lg={8} xl={3}>
+
+          <Box className={classes.box} m="auto">
+            <Avatar  className={classes.avatar} alt="Lol" src="https://i.pinimg.com/564x/f2/60/4d/f2604d7288860de99f88315a3487fa69.jpg"/>
           </Box>
+ 
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={12} md={4} lg={4} xl={3} >
           <Box className={classes.headerBox}>
             <Typography className={classes.NameHeader}>
               Zackery Alline V. Fajardo

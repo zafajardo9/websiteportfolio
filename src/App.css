@@ -11,12 +11,5 @@
 }
 
 * {
-  margin: 0;
   font-family: 'Raleway', sans-serif;
-}
-body {
-  background-color: var(--color-one);
-}
-.Navbar {
-  background-color: black;
 }

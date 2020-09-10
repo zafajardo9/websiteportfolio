@@ -24,11 +24,11 @@ export default function Body() {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
-            <Grid item xs={8}>
+            <Grid container>
+            <Grid item xs={12} sm={12} md={8} lg={8} xl={6}>
             <Paper className={classes.paper}>Content Here</Paper>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={12} md={4} lg={4} xl={6} >
             <Paper className={classes.paper}>Other here</Paper>
             </Grid>
             </Grid>

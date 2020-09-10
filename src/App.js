@@ -1,22 +1,14 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
-import Navbar from './Components/Navbar'
-import Header from './Components/Header'
-import Body from './Components/Body'
-import Footer from './Components/Footer'
+import {Navbar, Header, Body, Footer} from './Components'
 
-function App() {
-  return (
-    <>
-    <Navbar />
-    <Header />
-    <div className="App">
-      <h1>Zacks</h1>
-    </div>
-    <Body />
-    <Footer />
-    </>
-  );
+export default class extends Component {
+  render() {
+    return <Fragment>
+      <Navbar />
+      <Header />
+      <Body />
+      <Footer />
+    </Fragment>
+  }
 }
-
-export default App;
